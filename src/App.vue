@@ -1,10 +1,14 @@
 <script>
+
+import { state } from './state'
+
 export default {
 
   name: 'App', 	// nome del componente
 
   data() {
     return {
+      state,
       message: 'By'
     }
   },
@@ -18,7 +22,7 @@ export default {
 </script>
 <template>
 
-  {{ message }}
+  {{ state.message }}
 
 </template>
 <style></style>
