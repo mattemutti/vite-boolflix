@@ -1,11 +1,17 @@
 <script>
 
-import { state } from './state'
+import { state } from './state';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
 
 export default {
 
-  name: 'App', 	// nome del componente
+  name: 'App',
 
+  components: {
+    AppHeader,
+    AppMain
+  },
   data() {
     return {
       state,
@@ -22,7 +28,11 @@ export default {
 </script>
 <template>
 
-  {{ state.message }}
+
+  <AppHeader />
+  <AppMain />
+
+
 
 </template>
 <style></style>
