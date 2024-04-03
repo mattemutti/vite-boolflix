@@ -15,7 +15,7 @@ export const state = reactive({
 			.get('https://api.themoviedb.org/3/search/movie?api_key=80957307a07de1c274de94c5be154b47&query=' + this.searchText)
 			.then(resp => {
 				//console.log(resp);
-				this.movies = resp;
+				this.movies = resp.data;
 				//console.log(this.searchText);
 				this.createListMovies = true;
 				//console.log(this.createListMovies);

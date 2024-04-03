@@ -16,7 +16,7 @@ export default {
 	<div v-if="state.createListMovies === true">
 
 		<div v-for="movie in state.movies">
-			Titolo:{{ movie.results }}
+			Titolo:{{ movie.status }}
 
 		</div>
 	</div>
