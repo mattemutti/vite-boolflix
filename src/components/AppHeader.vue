@@ -6,7 +6,10 @@ export default {
 	name: 'AppHeader',
 
 	data() {
-		state
+		return {
+			state
+
+		}
 	}
 }
 </script>
