@@ -9,7 +9,7 @@ export default {
 	data() {
 		return {
 			state,
-			movies: [],
+
 
 		}
 	},
@@ -20,8 +20,8 @@ export default {
 </script>
 <template>
 
-	<input type="text" placeholder="digit" v-model="state.searchText">
-	<button @click="state.searchTitle">{{ state.message }}</button>
+	<input type="text" placeholder="search" v-model="state.searchText">
+	<button @click="state.searchTitle">{{ state.nameButton }}</button>
 
 </template>
 <style></style>

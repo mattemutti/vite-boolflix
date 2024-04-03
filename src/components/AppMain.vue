@@ -4,7 +4,8 @@ export default {
 	name: 'AppMain',		//nome del componente che serve per esportarlo
 	data() {
 		return {
-			state
+			state,
+
 
 		}
 	}
@@ -12,7 +13,13 @@ export default {
 </script>
 <template>
 
-	{{ state.message }}
+	<div v-if="state.createListMovies === true">
+
+		<div v-for="movie in state.movies">
+			Titolo:{{ movie.results }}
+
+		</div>
+	</div>
 
 </template>
 <style></style>
