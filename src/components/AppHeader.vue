@@ -19,9 +19,17 @@ export default {
 }
 </script>
 <template>
+	<div class="container">
+		<div class="d-flex justify-content-between align-items-cente p-4 text-aligne-center">
 
-	<input type="text" placeholder="search" v-model="state.searchText" @keyup.enter="state.searchTitle">
-	<button @click="state.searchTitle">{{ state.nameButton }}</button>
+			<h1 class="text-danger">Boolflix</h1>
+			<div>
+				<input type="text" placeholder="search" v-model="state.searchText" @keyup.enter="state.searchTitle">
+				<button @click="state.searchTitle">{{ state.nameButton }}</button>
+			</div>
+
+		</div>
+	</div>
 
 </template>
 <style></style>
