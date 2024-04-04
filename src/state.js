@@ -12,7 +12,7 @@ export const state = reactive({
 	starSerieTv: '',
 	api_url_movies: 'https://api.themoviedb.org/3/search/movie?api_key=80957307a07de1c274de94c5be154b47&query=',
 	api_url_tv: 'https://api.themoviedb.org/3/search/tv?api_key=80957307a07de1c274de94c5be154b47&query=',
-	url_Image: 'https://image.tmdb.org/t/p/w154',
+	url_Image: 'https://image.tmdb.org/t/p/w342',
 
 
 	searchTitle() {

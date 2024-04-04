@@ -1,0 +1,7 @@
+@use './partials/variables' as *;
+@use 'bootstrap';
+
+body {
+	background-color: $bg_color;
+	color: $text;
+}
