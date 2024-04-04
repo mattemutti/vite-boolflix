@@ -6,7 +6,6 @@ export default {
 		return {
 			state,
 
-
 		}
 	}
 }
@@ -14,15 +13,12 @@ export default {
 <template>
 
 	<div v-if="state.createListMovies === true">
-
-		<div v-for="movie in state.movies">
-			<div>
-				Titolo:{{ movie.title }}
-				Titolo Originale: {{ movie.original_title }}
-				Lingua: {{ movie.original_language }}
-				Voto: {{ movie.vote_average }}
-			</div>
-		</div>
+		<ul v-for="movie in state.movies">
+			<li>Titolo:{{ movie.title }}</li>
+			<li>Titolo Originale: {{ movie.original_title }}</li>
+			<li>Lingua: {{ movie.original_language }}</li>
+			<li>Voto: {{ movie.vote_average }}</li>
+		</ul>
 	</div>
 
 </template>

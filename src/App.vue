@@ -15,7 +15,6 @@ export default {
   data() {
     return {
       state,
-      message: 'By'
     }
   },
   methods: {
@@ -28,11 +27,9 @@ export default {
 </script>
 <template>
 
-
+  <h1>Boolflix</h1>
   <AppHeader />
   <AppMain />
-
-
 
 </template>
 <style></style>
