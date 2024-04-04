@@ -7,6 +7,10 @@ export default {
 			state,
 
 		}
+	},
+	methods: {
+
+
 	}
 }
 </script>
@@ -30,7 +34,33 @@ export default {
 			<li v-else-if="movie.original_language === 'ja'">Lingua: <img class="w_flag" src="../assets/img/flag/jp.svg"
 					alt=""></li>
 			<li v-else>Lingua: {{ movie.original_language }}</li>
-			<li>Voto: {{ movie.vote_average }}</li>
+
+			<li v-if="movie.vote_average.toFixed(0) <= 1">Voto: <i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> {{ movie.vote_average.toFixed(0) /
+		2 }}
+			</li>
+			<li v-else-if="(movie.vote_average.toFixed(0)) <= 2">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>{{ movie.vote_average.toFixed(0) /
+		2 }}
+			</li>
+			<li v-else-if="(movie.vote_average.toFixed(0)) <= 4">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ movie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else-if="movie.vote_average.toFixed(0) <= 6">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ movie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else-if="movie.vote_average.toFixed(0) <= 8">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ movie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else="movie.vote_average.toFixed(0) <= 10">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i>{{ movie.vote_average.toFixed(0) / 2 }}
+			</li>
 		</ul>
 	</div>
 
@@ -51,9 +81,37 @@ export default {
 			<li v-else-if="serie.original_language === 'ja'">Lingua: <img class="w_flag" src="../assets/img/flag/jp.svg"
 					alt=""></li>
 			<li v-else>Lingua: {{ serie.original_language }}</li>
-			<li>Voto: {{ serie.vote_average }}</li>
+			<li v-if="serie.vote_average.toFixed(0) <= 1">Voto: <i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i> {{ serie.vote_average.toFixed(0) /
+		2
+				}}
+			</li>
+			<li v-else-if="(serie.vote_average.toFixed(0)) <= 2">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>{{ serie.vote_average.toFixed(0) /
+		2
+				}}
+			</li>
+			<li v-else-if="(serie.vote_average.toFixed(0)) <= 4">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ serie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else-if="serie.vote_average.toFixed(0) <= 6">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ serie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else-if="serie.vote_average.toFixed(0) <= 8">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+					class="fa-regular fa-star"></i>{{ serie.vote_average.toFixed(0) / 2 }}
+			</li>
+			<li v-else="serie.vote_average.toFixed(0) <= 10">Voto: <i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+					class="fa-solid fa-star"></i>{{ serie.vote_average.toFixed(0) / 2 }}
+			</li>
 		</ul>
 	</div>
+
 
 </template>
 <style>
