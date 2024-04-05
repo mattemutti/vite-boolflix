@@ -30,8 +30,8 @@ export default {
 				<div class="col-xl-3 col-lg-4 col-md-6 col-12 p-1 imageCard rounded" v-for="movie in  state.movies ">
 					<img v-if="movie.poster_path != null" class="rounded text-center"
 						:src="state.url_Image + movie.poster_path" alt="">
-					<img v-else src="../../public/noimage.png" alt="">
-					<div class=" infoCard">
+					<img v-else class="rounded" src="../../public/noimage.png" alt="">
+					<div class="infoCard p-2">
 						<h5>Titolo: {{ movie.title }}</h5>
 						<h6>Titolo Originale: {{ movie.original_title }}</h6>
 						<div>
@@ -98,7 +98,7 @@ export default {
 					<img v-if="serie.poster_path != null" class=" text-center"
 						:src="state.url_Image + serie.poster_path" alt="">
 					<img v-else src="../../public/noimage.png" alt="">
-					<div class=" infoCard">
+					<div class="infoCard p-2">
 						<h5>Titolo:{{ serie.name }}</h5>
 						<h6>Titolo Originale: {{ serie.original_name }}</h6>
 						<div>
