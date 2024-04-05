@@ -28,8 +28,10 @@ export default {
 		<div class="container">
 			<div class="row">
 				<h2 class="text-center text-uppercase text-danger p-2">Film</h2>
-				<div class="col-xl-3 col-lg-4 col-md-6 col-12 p-1 imageCard" v-for="movie in  state.movies ">
-					<img class=" text-center" :src="state.url_Image + movie.poster_path" alt="">
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 p-1 imageCard rounded" v-for="movie in  state.movies ">
+					<img v-if="movie.poster_path != null" class="rounded text-center"
+						:src="state.url_Image + movie.poster_path" alt="">
+					<img v-else src="../../public/noimage.png" alt="">
 					<div class=" infoCard">
 						<h5>Titolo: {{ movie.title }}</h5>
 						<h6>Titolo Originale: {{ movie.original_title }}</h6>
@@ -94,7 +96,9 @@ export default {
 			<div class="row">
 				<h2 class="text-center text-uppercase text-danger p-4">Serie Tv</h2>
 				<div class="col-xl-3 col-lg-4 col-md-6 col-12 p-1 imageCard" v-for=" serie  in  state.serieTv ">
-					<img class=" text-center" :src="state.url_Image + serie.poster_path" alt="">
+					<img v-if="serie.poster_path != null" class=" text-center"
+						:src="state.url_Image + serie.poster_path" alt="">
+					<img v-else src="../../public/noimage.png" alt="">
 					<div class=" infoCard">
 						<h5>Titolo:{{ serie.name }}</h5>
 						<h6>Titolo Originale: {{ serie.original_name }}</h6>
@@ -167,6 +171,7 @@ body {
 		overflow: hidden;
 		background-size: cover;
 		text-align: center;
+
 	}
 
 	.infoCard {
