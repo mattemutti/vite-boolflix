@@ -2,7 +2,6 @@ import { reactive } from 'vue';
 import axios from 'axios';
 
 export const state = reactive({
-	nameButton: 'Search',
 	searchText: '',
 	createListMovies: false,
 	createListSerieTv: false,

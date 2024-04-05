@@ -28,9 +28,10 @@ export default {
 	<div v-if="state.createListMovies === true">
 		<div class="container">
 			<div class="row">
-				<h2 class="text-center text-uppercase">Film</h2>
-				<div class="col-xl-3 col-lg-4 col-md-6 col m-4 imageCard" v-for="movie in  state.movies ">
-					<img :src="state.url_Image + movie.poster_path" alt="">
+				<h2 class="text-center text-uppercase text-danger p-2">Film</h2>
+				<div class="col-xl-3 col-lg-4 col-md-6 col-12 p-1 imageCard text-center"
+					v-for="movie in  state.movies ">
+					<img class=" text-center" :src="state.url_Image + movie.poster_path" alt="">
 					<div class=" infoCard">
 						<h5 class="text-decoration-none">Titolo:{{ movie.title }}</h5>
 						<h6>Titolo Originale: {{ movie.original_title }}</h6>
@@ -156,6 +157,7 @@ body {
 
 	.imageCard {
 		position: relative;
+		overflow: hidden
 	}
 
 	.infoCard {
@@ -163,19 +165,20 @@ body {
 		top: 30px;
 		left: 30px;
 		visibility: hidden;
-
 	}
+
 
 	.imageCard:hover {
 		>img {
-			opacity: 50%;
+			opacity: 20%;
 		}
 
 
 		.infoCard {
 			visibility: visible;
 
-			z-index: 2;
+
+
 		}
 	}
 }
