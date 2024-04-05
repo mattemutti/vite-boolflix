@@ -18,7 +18,6 @@ export default {
 			this.showInfo = false;
 			console.log(this.showInfo, index);
 		}
-
 	}
 }
 </script>
@@ -37,15 +36,15 @@ export default {
 						<h6>Titolo Originale: {{ movie.original_title }}</h6>
 						<div>
 							<div v-if="movie.original_language === 'en'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/gb.svg" alt=""></div>
+									src="../../public/gb.svg" alt=""></div>
 							<div v-else-if="movie.original_language === 'it'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/it.svg" alt=""></div>
+									src="../../public/it.svg" alt=""></div>
 							<div v-else-if="movie.original_language === 'es'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/es.svg" alt=""></div>
+									src="../../public/es.svg" alt=""></div>
 							<div v-else-if="movie.original_language === 'fr'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/fr.svg" alt=""></div>
+									src="../../public/fr.svg" alt=""></div>
 							<div v-else-if="movie.original_language === 'ja'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/jp.svg" alt=""></div>
+									src="../../public/jp.svg" alt=""></div>
 							<div v-else>Lingua: {{ movie.original_language }}</div>
 						</div>
 						<!-- logica bandiera in base alla lingua -->
@@ -104,15 +103,15 @@ export default {
 						<h6>Titolo Originale: {{ serie.original_name }}</h6>
 						<div>
 							<div v-if="serie.original_language === 'en'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/gb.svg" alt=""></div>
+									src="../../public/gb.svg" alt=""></div>
 							<div v-else-if="serie.original_language === 'it'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/it.svg" alt=""></div>
+									src="../../public/it.svg" alt=""></div>
 							<div v-else-if="serie.original_language === 'es'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/es.svg" alt=""></div>
+									src="../../public/es.svg" alt=""></div>
 							<div v-else-if="serie.original_language === 'fr'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/fr.svg" alt=""></div>
+									src="../../public/fr.svg" alt=""></div>
 							<div v-else-if="serie.original_language === 'ja'">Lingua: <img class="w_flag"
-									src="../assets/img/flag/jp.svg" alt=""></div>
+									src="../../public/jp.svg" alt=""></div>
 							<div v-else>Lingua: {{ serie.original_language }}</div>
 						</div>
 						<!-- logica bandiera in base alla lingua -->
